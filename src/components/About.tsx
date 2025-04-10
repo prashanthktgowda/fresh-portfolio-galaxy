@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Trophy, Users, Clock, Laptop } from "lucide-react";
@@ -7,18 +6,18 @@ const About = () => {
   const stats = [
     {
       icon: <Trophy size={24} className="text-primary" />,
-      value: "5+",
+      value: "1+",
       label: "Years Experience"
     },
     {
       icon: <Users size={24} className="text-primary" />,
-      value: "50+",
-      label: "Happy Clients"
+      value: "10+",
+      label: "Projects Completed"
     },
     {
       icon: <Laptop size={24} className="text-primary" />,
-      value: "100+",
-      label: "Projects Completed"
+      value: "2",
+      label: "Internships"
     },
     {
       icon: <Clock size={24} className="text-primary" />,
@@ -32,7 +31,7 @@ const About = () => {
       <div className="max-w-3xl mx-auto text-center mb-16 animate-fade-in">
         <h2 className="section-title">About Me</h2>
         <p className="section-subtitle mx-auto">
-          Get to know me and my professional journey in web development.
+          Get to know me and my professional journey in Artificial Intelligence and Web Development.
         </p>
       </div>
 
@@ -47,17 +46,12 @@ const About = () => {
         </div>
 
         <div className="animate-slide-in">
-          <h3 className="text-2xl font-display font-bold mb-4">Web Developer & UI/UX Designer</h3>
+          <h3 className="text-2xl font-display font-bold mb-4">AI & Web Developer</h3>
           <p className="text-muted-foreground mb-6">
-            I'm a passionate web developer with 5+ years of experience creating 
-            visually appealing and highly functional websites. 
-            My expertise spans across front-end and back-end development, with 
-            a strong focus on creating intuitive user experiences.
+            I am a highly motivated Artificial Intelligence and Machine Learning student with a passion for innovation and leveraging AI to solve real-world problems. I specialize in creating visually appealing and functional websites while integrating AI-powered features.
           </p>
           <p className="text-muted-foreground mb-6">
-            I work with modern technologies like React, TypeScript, and 
-            Tailwind CSS to build responsive and accessible web applications 
-            that meet both client requirements and user needs.
+            With hands-on experience in full-stack development, blockchain, and machine learning, I have worked on impactful projects like a Blood Donor Search Web Portal, Areca Nut Price Forecasting, and a Transparent Fund Allocation System.
           </p>
           <div className="flex flex-wrap gap-4 mb-8">
             <Button variant="outline">

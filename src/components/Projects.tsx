@@ -1,66 +1,37 @@
-
+import { useEffect, useState } from "react";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 
 const Projects = () => {
-  const projects = [
-    {
-      id: 1,
-      title: "E-Commerce Platform",
-      description: "A fully responsive e-commerce platform with product filtering, cart functionality, and user authentication.",
-      image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      tags: ["React", "Node.js", "MongoDB", "Tailwind CSS"],
-      liveUrl: "#",
-      repoUrl: "#"
-    },
-    {
-      id: 2,
-      title: "Project Management Tool",
-      description: "A project management application with task tracking, team collaboration, and real-time updates.",
-      image: "https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80",
-      tags: ["React", "Firebase", "TypeScript", "Styled Components"],
-      liveUrl: "#",
-      repoUrl: "#"
-    },
-    {
-      id: 3,
-      title: "Fitness Tracker App",
-      description: "A mobile-first fitness tracking application with workout plans, progress tracking, and social features.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      tags: ["React Native", "Redux", "Express", "PostgreSQL"],
-      liveUrl: "#",
-      repoUrl: "#"
-    },
-    {
-      id: 4,
-      title: "Personal Finance Dashboard",
-      description: "A comprehensive financial dashboard for tracking income, expenses, investments and setting budget goals.",
-      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2026&q=80",
-      tags: ["Vue.js", "Chart.js", "Node.js", "MySQL"],
-      liveUrl: "#",
-      repoUrl: "#"
-    },
-    {
-      id: 5,
-      title: "Recipe Sharing Platform",
-      description: "A community-driven recipe sharing platform with search, filtering and user contributions.",
-      image: "https://images.unsplash.com/photo-1556911073-a517e752729c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      tags: ["Next.js", "GraphQL", "MongoDB", "Tailwind CSS"],
-      liveUrl: "#",
-      repoUrl: "#"
-    },
-    {
-      id: 6,
-      title: "Travel Itinerary Builder",
-      description: "An application for creating detailed travel itineraries with maps, recommendations, and sharing options.",
-      image: "https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2021&q=80",
-      tags: ["React", "Express", "MongoDB", "Google Maps API"],
-      liveUrl: "#",
-      repoUrl: "#"
-    },
-  ];
+  const [projects, setProjects] = useState([]);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch("https://api.github.com/users/prashanthktgowda/repos");
+        const data = await response.json();
+
+        // Transform the data to match the existing structure
+        const transformedProjects = data.map((repo) => ({
+          id: repo.id,
+          title: repo.name,
+          description: repo.description || "No description available.",
+          image: "https://res.cloudinary.com/dikoe9cct/image/upload/w_1000,ar_16:9,c_fill,g_auto,e_sharpen/v1744273931/projectimage_joz0lh.jpg", // Static image
+          tags: repo.topics || [], // GitHub topics
+          liveUrl: repo.homepage || "#", // Homepage URL if available
+          repoUrl: repo.html_url, // Repository URL
+        }));
+
+        setProjects(transformedProjects);
+      } catch (error) {
+        console.error("Error fetching GitHub repositories:", error);
+      }
+    };
+
+    fetchProjects();
+  }, []);
 
   return (
     <section id="projects" className="py-20 bg-secondary">
@@ -100,12 +71,14 @@ const Projects = () => {
                     Code
                   </a>
                 </Button>
-                <Button size="sm" asChild>
-                  <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                    <ExternalLink size={16} />
-                    Live Demo
-                  </a>
-                </Button>
+                {project.liveUrl !== "#" && (
+                  <Button size="sm" asChild>
+                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                      <ExternalLink size={16} />
+                      Live Demo
+                    </a>
+                  </Button>
+                )}
               </CardFooter>
             </Card>
           ))}
@@ -113,7 +86,7 @@ const Projects = () => {
 
         <div className="text-center mt-12">
           <Button size="lg" variant="outline">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/prashanthktgowda" target="_blank" rel="noopener noreferrer">
               View More Projects
             </a>
           </Button>

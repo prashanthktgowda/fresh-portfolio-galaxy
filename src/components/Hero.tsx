@@ -9,12 +9,11 @@ const Hero = () => {
         <div className="animate-fade-in">
           <p className="text-primary font-semibold mb-2">👋 Hello, I'm</p>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold mb-6">
-            John Doe
-            <span className="block mt-2 text-primary">Web Developer</span>
+            Prashanth K T
+            <span className="block mt-2 text-primary">Web Developer | AI Enthusiastic</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-lg">
-            I create beautiful, functional, and responsive websites with modern technologies
-            that help businesses grow and reach their goals.
+          I create beautiful, functional, and responsive websites using modern technologies. I strategically integrate AI-powered features, such as intelligent chatbots and personalization engines, to enhance user engagement and help businesses leverage data-driven insights for growth and achieving their goals.
           </p>
           <div className="flex flex-wrap gap-4">
             <Button size="lg" asChild>
@@ -26,7 +25,7 @@ const Hero = () => {
           </div>
           <div className="flex items-center gap-4 mt-8">
             <a 
-              href="https://github.com" 
+              href="https://github.com/prashanthktgowda" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -35,7 +34,7 @@ const Hero = () => {
               <span className="sr-only">GitHub</span>
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="www.linkedin.com/in/prashanth-k-t-4b596b249" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
@@ -44,7 +43,7 @@ const Hero = () => {
               <span className="sr-only">LinkedIn</span>
             </a>
             <a 
-              href="mailto:hello@example.com" 
+              href="mailto:prashanth.kt@campusuvce.in" 
               className="text-muted-foreground hover:text-primary transition-colors"
             >
               <Mail size={20} />
@@ -58,7 +57,7 @@ const Hero = () => {
             <div className="w-full h-full rounded-xl bg-gradient-to-br from-primary/10 to-primary/30 flex items-center justify-center">
               <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/20 shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3" 
+                  src="https://res.cloudinary.com/dikoe9cct/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1744270202/20250320_185935_w2iemi.jpg" 
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />

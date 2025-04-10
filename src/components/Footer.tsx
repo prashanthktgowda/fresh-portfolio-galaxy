@@ -9,17 +9,17 @@ const Footer = () => {
     { 
       name: "GitHub", 
       icon: <Github size={20} />, 
-      url: "https://github.com" 
+      url: "https://github.com/prashanthktgowda" 
     },
     { 
       name: "LinkedIn", 
       icon: <Linkedin size={20} />, 
-      url: "https://linkedin.com" 
+      url: "www.linkedin.com/in/prashanth-k-t-4b596b249" 
     },
     { 
       name: "Twitter", 
       icon: <Twitter size={20} />, 
-      url: "https://twitter.com" 
+      url: "https://x.com/prashanthktgowd?t=-ws2wnx5czkcY7wJxFUv7Q&s=08" 
     },
     { 
       name: "Instagram", 
@@ -29,7 +29,7 @@ const Footer = () => {
     { 
       name: "Mail", 
       icon: <Mail size={20} />, 
-      url: "mailto:hello@example.com" 
+      url: "mailto:prashanth.kt@campusuvce.in" 
     },
   ];
 
@@ -65,7 +65,7 @@ const Footer = () => {
         
         <div className="border-t border-border mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            &copy; {currentYear} John Doe. All rights reserved.
+            &copy; {currentYear} Prashanth K T. All rights reserved.
           </p>
           
           <div className="flex gap-6 mt-4 md:mt-0">

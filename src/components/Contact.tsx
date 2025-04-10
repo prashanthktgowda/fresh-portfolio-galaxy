@@ -47,17 +47,17 @@ const Contact = () => {
     {
       icon: <MapPin size={24} className="text-primary" />,
       title: "Location",
-      details: "San Francisco, California",
+      details: "UVCE Campus, Bangalore, India",
     },
     {
       icon: <Mail size={24} className="text-primary" />,
       title: "Email",
-      details: "hello@example.com",
+      details: "prashanthktgowda123@gmai.com",
     },
     {
       icon: <Phone size={24} className="text-primary" />,
       title: "Phone",
-      details: "+1 (555) 123-4567",
+      details: "+91 (876) 243-1756",
     },
   ];
 
