@@ -1,5 +1,5 @@
 
-import { ArrowDownIcon, GitHubIcon, LinkedinIcon, MailIcon } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -31,7 +31,7 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              <GitHubIcon size={20} />
+              <Github size={20} />
               <span className="sr-only">GitHub</span>
             </a>
             <a 
@@ -40,14 +40,14 @@ const Hero = () => {
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              <LinkedinIcon size={20} />
+              <Linkedin size={20} />
               <span className="sr-only">LinkedIn</span>
             </a>
             <a 
               href="mailto:hello@example.com" 
               className="text-muted-foreground hover:text-primary transition-colors"
             >
-              <MailIcon size={20} />
+              <Mail size={20} />
               <span className="sr-only">Email</span>
             </a>
           </div>
@@ -69,7 +69,7 @@ const Hero = () => {
       </div>
       <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce hidden md:block">
         <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">
-          <ArrowDownIcon size={24} />
+          <ArrowDown size={24} />
           <span className="sr-only">Scroll Down</span>
         </a>
       </div>
